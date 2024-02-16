@@ -15,15 +15,33 @@
     <div id="page-container">     
         <header id="header">
             <div class="logo-container">
-                <img src="./assests/images/logo.png" alt="Logo" height="200px" width="150px">
-                <a href="./login.html" target="_blank">Login</a>
+                <a href="./index.html"><img src="./assests/images/logo.png" alt="Logo" height="200px" width="150px"></a>
+                <a href="./login.html">Login</a>
             </div>
         </header>
 
         <div id="content">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
                 <br>
-                <a href="./payment.html">Book Now</a>
+                <form class="booking-form" action="./payment.html" method="get">
+                    <label for="adults">Adults:</label>
+                    <input type="number" name="Adults" id="adults" placeholder="1" required min="1">
+                    <br>
+                    <label for="name">Name:</label>
+                    <input type="text" name="Name" id="name" placeholder="" required>
+                    <br>
+                    <label for="from-date">From-date:</label>
+                    <input type="date" name="From-date" id="from-date" placeholder="" required>
+                    <br>
+                    <label for="to-date">To-date:</label>
+                    <input type="date" name="To-date" id="to-date" placeholder="" required>
+                    <br>
+                    <label for="total">Total:</label>
+                    <input type="number" name="Total" id="total" placeholder="" readonly required>
+                    <br>
+                    <button type="submit">Book Now</button>
+                </form>
+
                 <h2>Radisson Blu Hotel</h2>
                 <p>5 Star</p>
                 <p>New Delhi</p>
@@ -42,7 +60,7 @@
 
         <footer id="footer">
             <div>
-                <a href="./contact.html" target="_blank">Contact Us</a>
+                <a href="./contact.html">Contact Us</a>
                 <br>
                 <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="./assests/images/facebook.png" alt="facebook" height="20px" width="22px"></a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="./assests/images/instagram.png" alt="Instagram" height="20px" width="22px"></a>
