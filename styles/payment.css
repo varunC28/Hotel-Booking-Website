@@ -1,13 +1,15 @@
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    background-color: #e0e0e0
 }
 
 #page-container {
     height: 100%;
     width: 100%;
+    margin: 0;
+    background-color: #e0e0e0;
 }
 
 header img {
@@ -15,7 +17,7 @@ header img {
     width: 60px; 
 }
 
-#content img{
+#content img {
     height: 500px;
     width: 500px;
 }
@@ -23,4 +25,36 @@ header img {
 footer img {
     height: 20px; 
     width: 22px;
+}
+
+header {
+    background-color: rosybrown;
+}
+
+footer {
+    background-color: rosybrown;
+}
+
+#hotel-address {
+    background-color: rgb(132,136,139);
+    width: 50%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#customer-information {
+    margin: 2%;
+}
+
+#tariff-details {
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    padding-left: 2%;
 }

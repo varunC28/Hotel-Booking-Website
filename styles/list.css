@@ -1,13 +1,15 @@
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    background-color: #e0e0e0
 }
 
 #page-container {
     height: 100%;
     width: 100%;
+    margin: 0;
+    background-color: #e0e0e0;
 }
 
 header img {
@@ -27,4 +29,31 @@ body {
 footer img {
     height: 20px; 
     width: 22px;
+}
+
+header {
+    background-color: rosybrown;
+}
+
+footer {
+    background-color: rosybrown;
+}
+
+#list-view {
+    margin: 2%;
+}
+
+#radisson {
+    background-color: rgb(132,136,139);
+    width: 40%;
+}
+
+#lalit {
+    background-color: rgb(132,136,139);
+    width: 40%;
+}
+
+#taj {
+    background-color: rgb(132,136,139);
+    width: 40%;
 }

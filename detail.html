@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div id="page-container">     
 
-        <header>
+        <!-- Navigation Bar -->
+        <header id="nav-bar">
             <nav>
                 <a href="./index.html">
                     <img src="./assests/images/logo.png" alt="Logo" height="200px" width="150px">
@@ -23,46 +26,53 @@
             </nav>
         </header>
 
-        <div id="content">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
-                <br>
-                <form class="booking-form" action="./payment.html" method="get">
-                    <label for="adults">Adults:</label>
-                    <input type="number" name="Adults" id="adults" placeholder="1" required min="1">
+        <!-- Hotel Details -->
+        <section>
+                <div id="content">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
                     <br>
-                    <label for="name">Name:</label>
-                    <input type="text" name="Name" id="name" placeholder="" required>
-                    <br>
-                    <label for="from-date">From-date:</label>
-                    <input type="date" name="From-date" id="from-date" placeholder="" required>
-                    <br>
-                    <label for="to-date">To-date:</label>
-                    <input type="date" name="To-date" id="to-date" placeholder="" required>
-                    <br>
-                    <label for="total">Total:</label>
-                    <input type="number" name="Total" id="total" placeholder="" readonly required>
-                    <br>
-                    <button type="submit">Book Now</button>
-                </form>
+                    <form id="booking-form" action="./payment.html" method="get">
+                        <label for="adults">Adults:</label>
+                        <input type="number" name="Adults" id="adults" placeholder="1" required min="1">
+                        <br>
+                        <label for="name">Name:</label>
+                        <input type="text" name="Name" id="name" placeholder="" required>
+                        <br>
+                        <label for="from-date">From-date:</label>
+                        <input type="date" name="From-date" id="from-date" placeholder="" required>
+                        <br>
+                        <label for="to-date">To-date:</label>
+                        <input type="date" name="To-date" id="to-date" placeholder="" required>
+                        <br>
+                        <label for="total">Total:</label>
+                        <input type="number" name="Total" id="total" placeholder="" readonly required>
+                        <br>
+                        <button type="submit">Book Now</button>
+                    </form>
+    
+                    <div id="hotel-details">
+                        <h2>Radisson Blu Hotel</h2>
+                        <p>RATING</p>
+                        <p>5 Star</p>
+                        <p>New Delhi</p>
+                        <p>AMENITIES</p>
+                        <ul>
+                            <li>Room service</li>
+                            <li>Restaurant</li>
+                            <li>Business center</li>
+                            <li>Fitness center</li>
+                            <li>Pool</li>
+                        </ul>
+                        <h5>DESCRIPTION</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam similique explicabo aliquid facilis et quas beatae molestiae vero commodi 
+                        earum, architecto quidem nobis temporibus deleniti porro harum eligendi minus ullam.</p>
+                    </div>
 
-                <h2>Radisson Blu Hotel</h2>
-                <p>5 Star</p>
-                <p>New Delhi</p>
-                <p>AMENITIES</p>
-                <ul>
-                    <li>Room service</li>
-                    <li>Restaurant</li>
-                    <li>Business center</li>
-                    <li>Fitness center</li>
-                    <li>Pool</li>
-                </ul>
-                <h5>DESCRIPTION</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam similique explicabo aliquid facilis et quas beatae molestiae vero commodi 
-                   earum, architecto quidem nobis temporibus deleniti porro harum eligendi minus ullam.</p>
-        </div>
+                </div>
+        </section>
 
-        <footer>
-            <nav>
+        <!-- Contact details of the company -->
+        <footer id="footer">
                 <a href="./contact.html">Contact Us</a>
                 <br>
                 <a href="https://www.facebook.com" target="_blank" rel="noopener">
@@ -76,7 +86,6 @@
                 </a>
                 <br>
                 <p>&copy; 2020 ROOM SEARCH PVT. LTD.</p>
-            </nav>
         </footer>
     </div>
 </body>
