@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+#page-container {
+    height: 100%;
+    width: 100%;
+}
+
+header img {
+    height: 60px; 
+    width: 60px; 
+}
+
+#content img{
+    height: 500px;
+    width: 500px;
+}
+
+footer img {
+    height: 20px; 
+    width: 22px;
+}
