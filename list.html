@@ -8,6 +8,7 @@
     <title>List</title>
     <link rel="stylesheet" href="./styles/list.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -22,7 +23,7 @@
                 <a href="./index.html">
                     <img src="./assests/images/logo.png" alt="Logo" height="200px" width="150px">
                 </a>
-                <a href="./login.html">Login</a>
+                <a id="login-link" href="./login.html">Login</a>
             </nav>
         </header>
 
@@ -30,14 +31,14 @@
                 <div id="content">
 
                     <ul>
-                        <li><a href="#list-view">List View</a></li>
-                        <li><a href="#map-view">Map View</a></li>
+                        <li><a href="#list-view" id="lv">List View</a></li>
+                        <li><a href="#map-view" id="mv">Map View</a></li>
                     </ul>
                     
                     <div class="list-view" id="list-view">
-                        
-                        <div id="radisson">
-                            <a href="./detail.html">
+
+                        <div class="hotel-box" id="radisson">
+                            <a href="./detail.html" id="radisson-atag">
                                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
                                 <h3>Radisson Blu Hotel</h3>
                                 <p>5 Star</p>
@@ -45,14 +46,14 @@
                             </a>
                         </div>
                         
-                        <div id="lalit">
+                        <div class="hotel-box" id="lalit">
                             <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="The Lalit New Delhi">
                             <h3>The Lalit New Delhi</h3>
                             <p>4.5 Star</p>
                             <p>New Delhi</p>
                         </div>
                         
-                        <div id="taj">
+                        <div class="hotel-box" id="taj">
                             <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj Palace">
                             <h3>Taj Palace</h3>
                             <p>4.0 Star</p>
@@ -62,8 +63,8 @@
                     </div>
                     
                     <div class="map-view" id="map-view">
-                        <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map Image">
-                        <p>Map View</p>
+                        <!-- <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map Image">
+                        <p>Map View</p> -->
                     </div>
                 </div>
         </section>
@@ -71,19 +72,21 @@
 
         <!-- Contact details of the company -->
         <footer id="footer">
-                <a href="./contact.html">Contact Us</a>
-                <br>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener">
-                    <img src="./assests/images/facebook.png" alt="facebook" height="20px" width="22px">
-                </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener">
-                    <img src="./assests/images/instagram.png" alt="Instagram" height="20px" width="22px">
-                </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener">
-                    <img src="./assests/images/twitter.png" alt="Twitter" height="20px" width="22px">
-                </a>
-                <br>
-                <p>&copy; 2020 ROOM SEARCH PVT. LTD.</p>
+            <div class="footer-content">
+                <a href="./contact.html" id="contact-us-link">Contact Us</a>
+                <div class="footer-logos">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                        <img src="./assests/images/facebook.png" alt="facebook" height="20px" width="22px">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                        <img src="./assests/images/instagram.png" alt="Instagram" height="20px" width="22px">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener">
+                        <img src="./assests/images/twitter.png" alt="Twitter" height="20px" width="22px">
+                    </a>
+                </div>
+            </div>
+            <p id="copyright-text">&copy; 2020 ROOM SEARCH PVT. LTD.</p>
         </footer>
 
     </div>

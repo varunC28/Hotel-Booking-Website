@@ -1,4 +1,5 @@
 html, body {
+    font: 'Ubuntu', sans-serif;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -22,6 +23,14 @@ header img {
     width: 500px;
 }
 
+#login-link{
+    margin-right: 1%;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
 footer img {
     height: 20px; 
     width: 22px;
@@ -29,10 +38,45 @@ footer img {
 
 header {
     background-color: rosybrown;
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+
+nav{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer {
     background-color: rosybrown;
+    position: sticky;
+    bottom:0%;
+    z-index: 10;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#copyright-text{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 11px;
+}
+
+#contact-us-link{
+    text-decoration: none;
+    color: black;
+}
+
+#login-link{
+    text-decoration: none;
+    color: black;
 }
 
 #content img {
