@@ -1,95 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List</title>
-    <link rel="stylesheet" href="./styles/list.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
+        <!-- Import CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/loader.css">
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/list.css"> 
+    </head>
+    <body>
+        <div id="loader"></div>
+        <div class="main-container">    
+            <!-- Added the header elements: Logo and Login Button -->
+            <header class="header-footer" id="header"></header>
 
-<body>
-    <div id="page-container">
+            <!-- Added the main body content: List view of hotel with details and map view div -->
 
-        <!-- Navigation Bar -->
-        <header id="nav-bar">
-            <nav>
-                <a href="./index.html">
-                    <img src="./assests/images/logo.png" alt="Logo" height="200px" width="150px">
-                </a>
-                <a id="login-link" href="./login.html">Login</a>
-            </nav>
-        </header>
-
-        <section id="hotels-list">
-                <div id="content">
-
-                    <ul>
-                        <li><a href="#list-view" id="lv">List View</a></li>
-                        <li><a href="#map-view" id="mv">Map View</a></li>
-                    </ul>
-                    
-                    <div class="list-view" id="list-view">
-
-                        <div class="hotel-box" id="radisson">
-                            <a href="./detail.html" id="radisson-atag">
-                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
-                                <h3>Radisson Blu Hotel</h3>
-                                <p>5 Star</p>
-                                <p>New Delhi</p>
-                            </a>
-                        </div>
-                        
-                        <div class="hotel-box" id="lalit">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="The Lalit New Delhi">
-                            <h3>The Lalit New Delhi</h3>
-                            <p>4.5 Star</p>
-                            <p>New Delhi</p>
-                        </div>
-                        
-                        <div class="hotel-box" id="taj">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj Palace">
-                            <h3>Taj Palace</h3>
-                            <p>4.0 Star</p>
-                            <p>New Delhi</p>
-                        </div>
-                        
+            <div id="list-container">
+                <!-- Added nav pills/tabs for list view and map view using bootstrap --> 
+                <ul class="nav nav-pills" id="pills-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#list-view">List View</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#map-view">Map View</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tab-content">
+                    <div id="list-view" class="tab-pane fade show active">
+                        <div id="hotel-list"></div>
                     </div>
-                    
-                    <div class="map-view" id="map-view">
-                        <!-- <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map Image">
-                        <p>Map View</p> -->
+                    <div id="map-view" class="tab-pane fade">
+                        <div id="map"></div>
                     </div>
                 </div>
-        </section>
-        
+            </div>                    
 
-        <!-- Contact details of the company -->
-        <footer id="footer">
-            <div class="footer-content">
-                <a href="./contact.html" id="contact-us-link">Contact Us</a>
-                <div class="footer-logos">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener">
-                        <img src="./assests/images/facebook.png" alt="facebook" height="20px" width="22px">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener">
-                        <img src="./assests/images/instagram.png" alt="Instagram" height="20px" width="22px">
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener">
-                        <img src="./assests/images/twitter.png" alt="Twitter" height="20px" width="22px">
-                    </a>
-                </div>
-            </div>
-            <p id="copyright-text">&copy; 2020 ROOM SEARCH PVT. LTD.</p>
-        </footer>
+            <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+            <footer class="header-footer" id="footer"></footer>
+        </div>
 
-    </div>
-</body>
-
+        <script src="scripts/common.js"></script>
+        <script src="scripts/list.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=<YOUR_GOOGLE_API_KEY>"></script>
+    </body>
 </html>
