@@ -1,7 +1,7 @@
 //Trip Advisor API URL, host and key are stored in const variables
 const API_URL = "https://tripadvisor1.p.rapidapi.com/";
 const tripAdvisorHost = "travel-advisor.p.rapidapi.com";
-const tripAdvisorKey = "<YOUR_API_KEY>";
+const tripAdvisorKey = "c5dd5e3205msh99348bb558f03c8p13c79cjsna3ac95e49b8f";
 
 /*
 This function will manage the behavior of view more button and will show the new city cards if view more button is clicked 
@@ -56,13 +56,14 @@ let search = () => {
             if (this.readyState === this.DONE) {
                 /*close any already open lists of searched values*/
                 closeAllLists();
-                const data = JSON.parse(this.responseText).data;
-                const geos = data.filter((element) => {
-                    return element.result_type === "geos"
+                const data = JSON.parse(this.responseText).data.Typeahead_autocomplete;
+                const geos = data.results.filter((element) => {
+                    return element.detailsV2 && element.detailsV2.isGeo 
                 });
+                //console.log(geos);
                 let loactionList = [];
                 geos.forEach((element) => {
-                    loactionList.push(element.result_object.name);
+                   loactionList.push(element.detailsV2.names.name);
                 });
                 currentFocus = -1;
                 /*create a div which will show the suggestion list:*/
@@ -95,9 +96,9 @@ let search = () => {
             }
         });
 
-        xhr.open("GET", API_URL + "locations/auto-complete?lang=en_US&units=km&query=" + newValue);
-        xhr.setRequestHeader("x-rapidapi-host", tripAdvisorHost);
-        xhr.setRequestHeader("x-rapidapi-key", tripAdvisorKey);
+        xhr.open("GET", API_URL + "locations/v2/auto-complete?lang=en_US&units=km&query=" + newValue);
+        xhr.setRequestHeader("X-RapidAPI-Key", tripAdvisorKey);
+        xhr.setRequestHeader("X-RapidAPI-Host", tripAdvisorHost);
 
         xhr.send();
         

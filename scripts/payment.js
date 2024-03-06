@@ -1,7 +1,7 @@
 let urlParams = new URLSearchParams(window.location.search);
 const API_URL = "https://tripadvisor1.p.rapidapi.com/";
-const tripAdvisorHost = "tripadvisor1.p.rapidapi.com";
-const tripAdvisorKey = "<YOUR_API_KEY>";
+const tripAdvisorHost = "travel-advisor.p.rapidapi.com";
+const tripAdvisorKey = "c5dd5e3205msh99348bb558f03c8p13c79cjsna3ac95e49b8f";
 
 /* Fetch the API data for hotel details, and price calculation, and finally create all the text dynamically */
 let fetchAPI = () => {
@@ -10,6 +10,7 @@ let fetchAPI = () => {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             let result = JSON.parse(this.responseText).data[0];
+            console.log(result.parse);
 
             let toDate = new Date(urlParams.get('toDate'));
             let fromDate = new Date(urlParams.get('fromDate'));
@@ -26,6 +27,7 @@ let fetchAPI = () => {
             document.getElementById("tariff").innerHTML = "<strong class='heading'>Tariff Breakdown:</strong>&nbsp;Rs.1000 x " + urlParams.get('adult') + " Adults x " + days + " Nights";
             document.getElementById("amount").innerHTML = "<strong class='heading'>Total Amount:</strong>&nbsp;" + urlParams.get('price');
             disableLoader();
+
         }
     });
 
@@ -48,3 +50,4 @@ let payNow = e => {
 	e.preventDefault();
 	alert('Hi your booking is successfull!');
 };
+

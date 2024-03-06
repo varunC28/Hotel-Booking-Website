@@ -1,8 +1,7 @@
 let urlParams = new URLSearchParams(window.location.search);
-const API_URL = "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=10359481&checkin=2022-03-15&adults=1&lang=en_US&currency=USD&nights=2";
-const tripAdvisorHost = "tripadvisor16.p.rapidapi.com";
-const tripAdvisorKey = "<YOUR_API_KEY>";
-
+const API_URL = "https://tripadvisor1.p.rapidapi.com/";
+const tripAdvisorHost = "travel-advisor.p.rapidapi.com";
+const tripAdvisorKey = "c5dd5e3205msh99348bb558f03c8p13c79cjsna3ac95e49b8f";
 const PRICE_PER_ROOM = 1000;
 
 /* Function to update the Price field in the booking form, according to the dates, number of adults and total price */

@@ -1,11 +1,11 @@
 let urlParams = new URLSearchParams(window.location.search);
-const API_URL = "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=293919&adults=1&rooms=1&nights=2&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US";
+const API_URL = "https://tripadvisor1.p.rapidapi.com/";
 const tripAdvisorHost = "travel-advisor.p.rapidapi.com";
-const tripAdvisorKey = "<YOUR_API_KEY>";
-
+const tripAdvisorKey = "c5dd5e3205msh99348bb558f03c8p13c79cjsna3ac95e49b8f";
 
 //this function is used to initialize the google map and place the markers at the position obtained by the latitude and longitude of the hotel from the API
 let initMap = locations => {
+    console.log(locations);
     let center = {lat: parseFloat(locations[0][1]), lng: parseFloat(locations[0][2])};
     let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
@@ -64,6 +64,7 @@ let fetchHotelListAPI = () => {
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             let result = JSON.parse(this.responseText).data;
+            console.log(result);
             let locations = [];
             hotelList = result.filter(item => item.result_type == "lodging");
             hotelList.forEach(item => {
